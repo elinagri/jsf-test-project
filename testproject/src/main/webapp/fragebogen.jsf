@@ -617,7 +617,7 @@ Courier, monospace;">
         </table>
         <br/>
         <h:outputLabel value="13. Der vermittelte Stoff ist:" styleClass="fragelabel"/>
-        <h:panelHorizontalLayout>
+        
             <h:selectOneRadio layout="horizontal" styleClass="fragelabel" value="#{neueBean.radiovalue}"
                                valueChangeListener="#{neueBean.vclRadio}" autoSubmit="true" contentStyle="font-family: Courier New,
 Courier, monospace;">
@@ -627,10 +627,10 @@ Courier, monospace;">
                 <f:selectItem itemLabel="zu gering | " itemValue="3"/>
                 <f:selectItem itemLabel="weiß nicht" itemValue="0"/>
             </h:selectOneRadio>
-        </h:panelHorizontalLayout>
+        
         <br/>
         <h:outputLabel value="14. Besonders gestört hat mich: (Mehrfachnennungen möglich)" styleClass="fragelabel"/>
-        <h:panelHorizontalLayout>
+        
             <h:selectManyCheckbox styleClass="fragelabel" value="#{neueBean.cbxValues}"
                                    valueChangeListener="#{neueBean.vclCheckboxen}" autoSubmit="true" contentStyle="font-family: Courier New,
 Courier, monospace;">
@@ -644,7 +644,7 @@ Courier, monospace;">
                 <f:selectItem itemLabel="zu wenig Anwesende" itemValue="5"/>
                 <f:selectItem itemLabel="häufige Verlegung/Ausfall" itemValue="6"/>
             </h:selectManyCheckbox>
-        </h:panelHorizontalLayout>
+        
         <table>
             <tr>
                 <td></td>
@@ -749,7 +749,7 @@ Courier, monospace;">
         </table>
         <h:outputLabel value="18. Mein Zeitaufwand für die Vor- und Nachbereitung der LV liegt in einer durchschnittlichen Semesterwoche bei:"
                         styleClass="fragelabel"/>
-        <h:panelHorizontalLayout>
+        
             <h:selectOneRadio layout="horizontal" styleClass="fragelabel" value="#{neueBean.radiovalue}"
                                valueChangeListener="#{neueBean.vclRadio}" autoSubmit="true" contentStyle="font-family: Courier New,
 Courier, monospace;">
@@ -759,7 +759,7 @@ Courier, monospace;">
                 <f:selectItem itemLabel="4-6 Std." itemValue="2"/>
                 <f:selectItem itemLabel="mehr als 6 Std." itemValue="3"/>
             </h:selectOneRadio>
-        </h:panelHorizontalLayout>
+        
         <table>
             <tr>
                 <td>
