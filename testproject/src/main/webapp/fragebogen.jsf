@@ -1,8 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<h:document title="Dozenten-Evaluation Fragebogen" xmlns="http://www.w3.org/1999/xhtml"
+<html xmlns="http://www.w3.org/1999/xhtml"
              xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>-->
     <h:outputStylesheet library="css/" name="fblayout.css"/>
+    <h:head>
+    	<title>Fragebogen</title>
+    </h:head>
     <h:form>
         <div style="padding:1em;border-style:double">
             <table>
@@ -1001,12 +1004,11 @@ Courier, monospace;">
         </table>
         <h:commandButton id="Absenden" text="Fragebogen abschicken" action="success"
                           actionListener="#{neueBean.in_db_schreiben}"/>
-        <h:panelPage>
+        
             <f:facet name="appCopyright">
                 <h:outputText value="Rel. 2012-06-22"/>
             </f:facet>
             <h:messages globalOnly="false"/>
-            <h:spacer height="10" width="10"/>
-        </h:panelPage>
+            
     </h:form>
-</h:document>
+</html>

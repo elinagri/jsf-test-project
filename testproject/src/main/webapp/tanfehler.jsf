@@ -1,21 +1,22 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<h:document title="Fehler!" xmlns="http://www.w3.org/1999/xhtml"
+<html xmlns="http://www.w3.org/1999/xhtml"
              xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>-->
         <h:outputStylesheet library="css/" name="fragebogen.css"/>
-        
+    <h:head>
+    	<title>Fehler!</title>
+    </h:head>    
     <h:form>
          <p></p>
         <h:outputText  inlineStyle="font-size: large; " value="#{neueBean.tanmeldung}"></h:outputText>
         <p></p>
         <h2><a href="faces/taneingabe.jsf" style="font-size: large;"> Zurück</a></h2>
-        <h:panelPage>
+        
             <f:facet name="appCopyright">
                 <h:outputText value="Rel. 2012-06-22"/>
             </f:facet>
             <h:messages globalOnly="false"/>
-            <h:spacer height="10" width="10"/>
-        </h:panelPage>
+
     </h:form>
-</h:document>
+</html>
