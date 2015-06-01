@@ -41,12 +41,13 @@
 			<artifactId>jsp-api</artifactId>
 			<version>2.1</version>
 		</dependency>
-
-		<!-- <dependency>
-			<groupId>org.apache.myfaces.trinidad</groupId>
-			<artifactId>trinidad-api</artifactId>
-			<version>2.1.0</version>
-		</dependency>-->
+		<dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.0-801.jdbc4</version>
+		</dependency>
+		<!-- <dependency> <groupId>org.apache.myfaces.trinidad</groupId> <artifactId>trinidad-api</artifactId> 
+			<version>2.1.0</version> </dependency> -->
 	</dependencies>
 	<repositories>
 		<repository>
