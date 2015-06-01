@@ -18,12 +18,9 @@
         <p></p>
         <h:commandButton id="go" action="#{neueBean.tan_pruefen}" text="Weiter zum Fragebogen"/>
         <p></p>
-        <h:panelPage>
             <f:facet name="appCopyright">
                 <h:outputText value="Rel. 2012-06-22"/>
             </f:facet>
             <h:messages globalOnly="false"/>
-            <h:spacer height="10" width="10"/>
-        </h:panelPage>
     </h:form>
 </html>

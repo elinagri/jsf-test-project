@@ -96,15 +96,27 @@ public class MbDb {
 		}
 	}
 
-	public static Connection getCon() throws URISyntaxException, SQLException {
-		URI dbUri = new URI(System.getenv("DATABASE_URL"));
+	public Connection getCon() {
+		URI dbUri = null;
+		try {
+			dbUri = new URI(System.getenv("DATABASE_URL"));
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		String username = dbUri.getUserInfo().split(":")[0];
 		String password = dbUri.getUserInfo().split(":")[1];
 		String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':'
 				+ dbUri.getPort() + dbUri.getPath();
 
-		return DriverManager.getConnection(dbUrl, username, password);
+		try {
+			return DriverManager.getConnection(dbUrl, username, password);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 	/**
