@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <faces-config version="2.0" xmlns="http://java.sun.com/xml/ns/javaee">
-	<application>
-		<!-- Use the Trinidad RenderKit -->
+	<!-- <application>
+		Use the Trinidad RenderKit
 		<default-render-kit-id>
 			org.apache.myfaces.trinidad.core
 		</default-render-kit-id>
-	</application>
+	</application>-->
 	<navigation-rule>
 		<from-view-id>/taneingabe.jsf</from-view-id>
 		<navigation-case>

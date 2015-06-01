@@ -1,24 +1,24 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<tr:document title="Willkommen zur Dozenten-Evaluation" xmlns="http://www.w3.org/1999/xhtml"
+<h:document title="Willkommen zur Dozenten-Evaluation" xmlns="http://www.w3.org/1999/xhtml"
              xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
              xmlns:tr="http://myfaces.apache.org/trinidad">
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <h:outputStylesheet library="css/" name="fragebogen.css"/>
-    <tr:form>
-        <tr:outputText inlineStyle="font-size: large;" value="Willkommen zur Dozenten-Evaluation!"></tr:outputText>
+    <h:form>
+        <h:outputText inlineStyle="font-size: large;" value="Willkommen zur Dozenten-Evaluation!"></h:outputText>
         <p></p>
-        <center><tr:inputText label="Geben Sie bitte Ihre TAN ein:" value="#{neueBean.tan}" required="true"
-                      requiredMessageDetail="Die Angabe einer TAN ist obligatorisch"></tr:inputText></center>
+        <center><h:inputText label="Geben Sie bitte Ihre TAN ein:" value="#{neueBean.tan}" required="true"
+                      requiredMessageDetail="Die Angabe einer TAN ist obligatorisch"></h:inputText></center>
         <p></p>
-        <tr:commandButton id="go" action="#{neueBean.tan_pruefen}" text="Weiter zum Fragebogen"/>
+        <h:commandButton id="go" action="#{neueBean.tan_pruefen}" text="Weiter zum Fragebogen"/>
         <p></p>
-        <tr:panelPage>
+        <h:panelPage>
             <f:facet name="appCopyright">
-                <tr:outputText value="Rel. 2012-06-22"/>
+                <h:outputText value="Rel. 2012-06-22"/>
             </f:facet>
-            <tr:messages globalOnly="false"/>
-            <tr:spacer height="10" width="10"/>
-        </tr:panelPage>
-    </tr:form>
-</tr:document>
+            <h:messages globalOnly="false"/>
+            <h:spacer height="10" width="10"/>
+        </h:panelPage>
+    </h:form>
+</h:document>
