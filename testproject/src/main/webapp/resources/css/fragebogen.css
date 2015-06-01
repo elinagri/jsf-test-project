@@ -1,0 +1,10 @@
+/******************************************************************************
+* Style Sheet fuer Fragebogen
+* Version 2012-04-13
+* Successfully checked with http://jigsaw.w3.org/css-validator/
+******************************************************************************/
+
+body { background-color: /* #66ccff */ white; color: #000000; text-align:center; }
+
+.center
+{text-align:center;     }

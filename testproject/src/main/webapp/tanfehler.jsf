@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tr:document title="Fehler!" xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+             xmlns:tr="http://myfaces.apache.org/trinidad">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <h:outputStylesheet library="css/" name="fragebogen.css"/>
+        
+    <tr:form>
+         <p></p>
+        <tr:outputText  inlineStyle="font-size: large; " value="#{neueBean.tanmeldung}"></tr:outputText>
+        <p></p>
+        <h2><a href="faces/taneingabe.jsf" style="font-size: large;"> Zurück</a></h2>
+        <tr:panelPage>
+            <f:facet name="appCopyright">
+                <tr:outputText value="Rel. 2012-06-22"/>
+            </f:facet>
+            <tr:messages globalOnly="false"/>
+            <tr:spacer height="10" width="10"/>
+        </tr:panelPage>
+    </tr:form>
+</tr:document>

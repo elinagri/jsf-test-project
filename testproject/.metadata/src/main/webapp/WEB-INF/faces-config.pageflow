@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14331783173100" configfile="/testproject/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="taneingabe.jsf" x="122" y="370" id="pf14331783524701" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14331783524702 pf14331783524703" path="/taneingabe.jsf"/>
+  <nodes xsi:type="pageflow:PFPage" name="fragebogen.jsf" x="338" y="178" id="pf14331783524704" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf14331783524705" inlinks="pf14331783524702" path="/fragebogen.jsf"/>
+  <nodes xsi:type="pageflow:PFPage" name="tanfehler.jsf" x="338" y="562" id="pf14331783524706" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf14331783524703" path="/tanfehler.jsf"/>
+  <nodes xsi:type="pageflow:PFPage" name="danke.jsf" x="554" y="178" id="pf14331783524717" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf14331783524705" path="/danke.jsf"/>
+  <links id="pf14331783524702" target="pf14331783524704" source="pf14331783524701" outcome="success" fromaction="#{neueBean.tan_pruefen}"/>
+  <links id="pf14331783524703" target="pf14331783524706" source="pf14331783524701" outcome="fail" fromaction="#{neueBean.tan_pruefen}"/>
+  <links id="pf14331783524705" target="pf14331783524717" source="pf14331783524704" outcome="success"/>
+</pageflow:Pageflow>

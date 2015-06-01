@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="2.0" xmlns="http://java.sun.com/xml/ns/javaee">
+	<application>
+		<!-- Use the Trinidad RenderKit -->
+		<default-render-kit-id>
+			org.apache.myfaces.trinidad.core
+		</default-render-kit-id>
+	</application>
+	<navigation-rule>
+		<from-view-id>/taneingabe.jsf</from-view-id>
+		<navigation-case>
+			<from-action>#{neueBean.tan_pruefen}</from-action>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/fragebogen.jsf</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{neueBean.tan_pruefen}</from-action>
+			<from-outcome>fail</from-outcome>
+			<to-view-id>/tanfehler.jsf</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/fragebogen.jsf</from-view-id>
+		<navigation-case>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/danke.jsf</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<managed-bean>
+		<managed-bean-name>neueBean</managed-bean-name>
+		<managed-bean-class>evaluationproject.EvaluationFB
+		</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>mb_db</managed-bean-name>
+		<managed-bean-class>evaluationproject.MbDb</managed-bean-class>
+		<managed-bean-scope>application</managed-bean-scope>
+		<managed-property>
+			<property-name>user</property-name>
+			<value>root</value>
+		</managed-property>
+		<managed-property>
+			<property-name>pw</property-name>
+			<value>abc</value>
+		</managed-property>
+		<managed-property>
+			<property-name>constr</property-name>
+			<value>jdbc:mysql://localhost/evaluation</value>
+		</managed-property>
+	</managed-bean>
+</faces-config>
