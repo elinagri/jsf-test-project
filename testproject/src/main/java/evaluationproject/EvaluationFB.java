@@ -535,4 +535,9 @@ public class EvaluationFB implements Serializable {
 			ex.printStackTrace();
 		}
 	}
+	
+	public String zeichenkettenVerknuepefen(String s1, String s2) {
+		String s = s1+s2;
+		return s;
+	}
 }
