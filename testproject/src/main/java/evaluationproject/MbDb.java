@@ -99,6 +99,7 @@ public class MbDb {
 	public Connection getCon() {
 		URI dbUri = null;
 		try {
+			System.out.println("DBURL: " + System.getenv("DATABASE_URL"));
 			dbUri = new URI(System.getenv("DATABASE_URL"));
 		} catch (URISyntaxException e) {
 			// TODO Auto-generated catch block
