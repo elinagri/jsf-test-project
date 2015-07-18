@@ -16,6 +16,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Date;
+import java.util.Properties;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
@@ -97,7 +98,18 @@ public class MbDb {
 	}
 
 	public Connection getCon() {
+		try {
+			Class.forName("org.postgresql.Driver");
+		} catch (ClassNotFoundException e) {
+			System.out.println("Where is your PostgreSQL JDBC Driver? "
+					+ "Include in your library path!");
+			e.printStackTrace();
+			return null;
+		}
+		System.out.println("PostgreSQL JDBC Driver Registered!");
+
 		URI dbUri = null;
+		String sysEnvDB_URL = null;
 		try {
 			System.out.println("DBURL: " + System.getenv("DATABASE_URL"));
 			dbUri = new URI(System.getenv("DATABASE_URL"));
@@ -108,11 +120,19 @@ public class MbDb {
 
 		String username = dbUri.getUserInfo().split(":")[0];
 		String password = dbUri.getUserInfo().split(":")[1];
-		String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':'
-				+ dbUri.getPort() + dbUri.getPath();
+		String dbUrl = "jdbc:postgresql://"
+				+ dbUri.getHost()
+				+ ':'
+				+ dbUri.getPort()
+				+ dbUri.getPath()
+				+ "?user=bmavspmsuqdhks&password=BBVbAf48gY-7KuWSUvByLf5mGI&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory";
 
 		try {
-			return DriverManager.getConnection(dbUrl, username, password);
+			Properties props = new Properties();
+			props.setProperty("user", "bmavspmsuqdhks");
+			props.setProperty("password", "BBVbAf48gY-7KuWSUvByLf5mGI");
+			props.setProperty("ssl", "true");
+			return DriverManager.getConnection(dbUrl, props);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
