@@ -8,7 +8,7 @@
     <h:outputStylesheet library="css/" name="fragebogen.css"/>
     <h:head>
     	<!-- <title>Willkommen zur Dozenten-Evaluation</title>-->
-    	<title>Titel ist falsch!</title>
+    	<title>Tan-Eingabe</title>
     </h:head>
  
     <h:form>
