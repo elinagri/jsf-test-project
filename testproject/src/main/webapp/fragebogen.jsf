@@ -1002,7 +1002,7 @@ Courier, monospace;">
                 </td>
             </tr>
         </table>
-        <h:commandButton id="Absenden" text="Fragebogen abschicken" action="success"
+        <h:commandButton id="Absenden" value="Fragebogen abschicken" action="success"
                           actionListener="#{neueBean.in_db_schreiben}"/>
         
             <f:facet name="appCopyright">

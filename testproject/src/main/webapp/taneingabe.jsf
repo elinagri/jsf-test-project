@@ -17,7 +17,7 @@
         <center><h:inputText label="Geben Sie bitte Ihre TAN ein:" value="#{neueBean.tan}" required="true"
                       requiredMessageDetail="Die Angabe einer TAN ist obligatorisch"></h:inputText></center>
         <p></p>
-        <h:commandButton id="go" action="#{neueBean.tan_pruefen}" text="Weiter zum Fragebogen"/>
+        <h:commandButton id="go" action="#{neueBean.tan_pruefen}"  value="Weiter zum Fragebogen"/>
         <p></p>
             <f:facet name="appCopyright">
                 <h:outputText value="Rel. 2012-06-22"/>
