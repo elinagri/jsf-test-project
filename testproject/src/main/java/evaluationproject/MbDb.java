@@ -109,30 +109,25 @@ public class MbDb {
 		System.out.println("PostgreSQL JDBC Driver Registered!");
 
 		URI dbUri = null;
-		String sysEnvDB_URL = null;
 		try {
-			System.out.println("DBURL: " + System.getenv("DATABASE_URL"));
 			dbUri = new URI(System.getenv("DATABASE_URL"));
 		} catch (URISyntaxException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 		String username = dbUri.getUserInfo().split(":")[0];
 		String password = dbUri.getUserInfo().split(":")[1];
-		String dbUrl = "jdbc:postgresql://"
-				+ dbUri.getHost()
-				+ ':'
-				+ dbUri.getPort()
-				+ dbUri.getPath()
-				+ "?user=bmavspmsuqdhks&password=BBVbAf48gY-7KuWSUvByLf5mGI&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory";
+		String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':'
+				+ dbUri.getPort() + dbUri.getPath();
+		// +
+		// "?user=bmavspmsuqdhks&password=BBVbAf48gY-7KuWSUvByLf5mGI&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory";
 
 		try {
-			Properties props = new Properties();
-			props.setProperty("user", "bmavspmsuqdhks");
-			props.setProperty("password", "BBVbAf48gY-7KuWSUvByLf5mGI");
-			props.setProperty("ssl", "true");
-			return DriverManager.getConnection(dbUrl, props);
+			// Properties props = new Properties();
+			// props.setProperty("user", "bmavspmsuqdhks");
+			// props.setProperty("password", "BBVbAf48gY-7KuWSUvByLf5mGI");
+			// props.setProperty("ssl", "true");
+			return DriverManager.getConnection(dbUrl, username, password);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

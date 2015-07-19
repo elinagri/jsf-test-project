@@ -2,26 +2,35 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-             xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
 
-    <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>-->
-    <h:outputStylesheet library="css/" name="fragebogen.css"/>
-    <h:head>
-    	<!-- <title>Willkommen zur Dozenten-Evaluation</title>-->
-    	<title>Tan-Eingabe</title>
-    </h:head>
- 
-    <h:form>
-        <h:outputText inlineStyle="font-size: large;" value="Willkommen zur Dozenten-Evaluation!"></h:outputText>
-        <p></p>
-        <center><h:inputText label="Geben Sie bitte Ihre TAN ein:" value="#{neueBean.tan}" required="true"
-                      requiredMessageDetail="Die Angabe einer TAN ist obligatorisch"></h:inputText></center>
-        <p></p>
-        <h:commandButton id="go" action="#{neueBean.tan_pruefen}"  value="Weiter zum Fragebogen"/>
-        <p></p>
-            <f:facet name="appCopyright">
-                <h:outputText value="Rel. 2012-06-22"/>
-            </f:facet>
-            <h:messages globalOnly="false"/>
-    </h:form>
+<!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>-->
+<h:outputStylesheet library="css/" name="fragebogen.css" />
+<h:head>
+	<!-- <title>Willkommen zur Dozenten-Evaluation</title>-->
+	<title>Tan-Eingabe</title>
+</h:head>
+
+<h:form>
+	<h:outputText inlineStyle="font-size: large;"
+		value="Willkommen zur Dozenten-Evaluation!"></h:outputText>
+	<p></p>
+	<center>
+		<h:inputText label="Geben Sie bitte Ihre TAN ein:"
+			value="#{neueBean.tan}" required="true"
+			requiredMessageDetail="Die Angabe einer TAN ist obligatorisch"></h:inputText>
+	</center>
+	<p></p>
+	<h:commandButton id="go" action="#{neueBean.tan_pruefen}"
+		value="Weiter zum Fragebogen" />
+	<p></p>
+	<!-- <h:inputTextarea disabled="true" value="Willkommen an der HTW Berlin"
+		style="height: 100px;" />-->
+	<p></p>
+	<f:facet name="appCopyright">
+		<h:outputText value="Rel. 2012-06-22" />
+	</f:facet>
+	<h:messages globalOnly="false" />
+</h:form>
 </html>

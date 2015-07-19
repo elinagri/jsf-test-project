@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="Elina (generated)" id="1437307233813-1">
+        <createTable tableName="evaluation_results">
+            <column name="tan" type="INT"/>
+            <column name="nr1a" type="INT"/>
+            <column name="nr1b" type="INT"/>
+            <column name="nr1c" type="INT"/>
+            <column name="nr2a" type="INT"/>
+            <column name="nr2b" type="INT"/>
+            <column name="nr2c" type="INT"/>
+            <column name="nr2d" type="INT"/>
+            <column name="nr2e" type="INT"/>
+            <column name="nr2f" type="INT"/>
+            <column name="nr3a" type="INT"/>
+            <column name="nr3b" type="INT"/>
+            <column name="nr3c" type="INT"/>
+            <column name="nr3d" type="INT"/>
+            <column name="nr3e" type="INT"/>
+            <column name="nr4" type="INT"/>
+            <column name="nr5" type="INT"/>
+            <column name="nr6" type="INT"/>
+            <column name="nr7" type="INT"/>
+            <column name="nr8" type="INT"/>
+            <column name="nr9" type="INT"/>
+            <column name="nr10" type="INT"/>
+            <column defaultValue="NULL::character varying" name="nr11a" type="VARCHAR(100)"/>
+            <column defaultValue="NULL::character varying" name="nr11b" type="VARCHAR(100)"/>
+            <column defaultValue="NULL::character varying" name="nr11c" type="VARCHAR(100)"/>
+            <column defaultValue="NULL::character varying" name="nr11d" type="VARCHAR(100)"/>
+            <column defaultValue="NULL::character varying" name="nr12a" type="VARCHAR(100)"/>
+            <column defaultValue="NULL::character varying" name="nr12b" type="VARCHAR(100)"/>
+            <column defaultValue="NULL::character varying" name="nr12c" type="VARCHAR(100)"/>
+            <column defaultValue="NULL::character varying" name="nr12d" type="VARCHAR(100)"/>
+            <column defaultValue="NULL::character varying" name="nr12e" type="VARCHAR(100)"/>
+            <column defaultValue="NULL::character varying" name="nr12f" type="VARCHAR(100)"/>
+            <column defaultValue="NULL::character varying" name="nr12g" type="VARCHAR(100)"/>
+            <column defaultValue="NULL::character varying" name="nr13" type="VARCHAR(50)"/>
+            <column name="nr14_laerm" type="INT"/>
+            <column name="nr14_raum" type="INT"/>
+            <column name="nr14_bem" type="INT"/>
+            <column name="nr14_literatur" type="INT"/>
+            <column name="nr14_tzahl" type="INT"/>
+            <column name="nr14_anw" type="INT"/>
+            <column name="nr14_ausfall" type="INT"/>
+            <column name="nr15" type="INT"/>
+            <column defaultValue="NULL::character varying" name="nr16" type="VARCHAR(25)"/>
+            <column name="nr17a" type="INT"/>
+            <column name="nr17b" type="INT"/>
+            <column name="nr17c" type="INT"/>
+            <column defaultValue="NULL::character varying" name="nr18" type="VARCHAR(50)"/>
+            <column defaultValue="NULL::character varying" name="nr19" type="VARCHAR(20)"/>
+            <column defaultValue="NULL::character varying" name="nr20" type="VARCHAR(20)"/>
+            <column defaultValue="NULL::character varying" name="nr21" type="VARCHAR(20)"/>
+            <column name="nr22" type="INT"/>
+            <column defaultValue="NULL::character varying" name="nr23a" type="VARCHAR(10)"/>
+            <column defaultValue="NULL::character varying" name="nr23b" type="VARCHAR(30)"/>
+            <column defaultValue="NULL::character varying" name="nr23c" type="VARCHAR(50)"/>
+            <column defaultValue="NULL::character varying" name="nr24" type="VARCHAR(500)"/>
+            <column name="nr25" type="INT"/>
+            <column name="nr26" type="INT"/>
+            <column name="nr27" type="INT"/>
+            <column name="nr28" type="INT"/>
+            <column name="nr29" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Elina (generated)" id="1437307233813-2">
+        <createTable tableName="tantabelle">
+            <column name="tan" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="modulnr" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="modulname" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dozent" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="semester" type="VARCHAR(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="verwendet" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
