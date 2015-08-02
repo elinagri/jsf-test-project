@@ -5,7 +5,7 @@
     <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>-->
     <h:outputStylesheet library="css/" name="fragebogen.css"/>
     <h:head>
-    	<title>Danke!</title>
+    	<title>Vieln Dank!</title>
     </h:head>
     <h:form>
         <h:outputText inlineStyle="font-size: large; text-align: center" value="Vielen Dank für Ihre Teilnahme!"></h:outputText>
